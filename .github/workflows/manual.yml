@@ -32,5 +32,5 @@ jobs:
         with:
           branch: gh-pages
           repository-name: ldru/MyMoment
-          token: ${{ secrets.GH_PAGES_DEPLOY_MOMENT }}
+          ssh-key: ${{ secrets.GH_PAGES_DEPLOY_MOMENT }}
           folder: build     # The deployment folder should match the name of the artifact. Even though our project builds into the 'build' folder the artifact name of 'site' must be placed here.

@@ -8,14 +8,40 @@ sidebar_position: 2
 
 | Useful Link        |   Halving Date            |  
 |:---------------------:|:-------------------:|
+|  diamondswap  |  https://diamondswap.com/exchange     |
 |  Bridge  |  https://portal.dioneprotocol.com     |
+|  Test Dione Faucet  |  https://portal.dioneprotocol.com/faucet     |
 |  Testnet Explorer | [https://testnet.odysseyscan.com](https://testnet.odysseyscan.com)       |
 |  Mainnet Explorer | [https://odysseyscan.com/](https://odysseyscan.com/)       |
 
-
 + Deploy Wrapped token
 
-https://docs.dioneprotocol.com/odyssey-guide-to-mainnet/onboarding-guide/getting-started/your-first-odyssey-dapp-token/deploying-on-odyssey-chain-as-an-existing-evm-project
+  + https://docs.dioneprotocol.com/odyssey-guide-to-mainnet/onboarding-guide/getting-started/your-first-odyssey-dapp-token/deploying-on-odyssey-chain-as-an-existing-evm-project
+
+  + Deploying smart contracts
+
+    https://docs.dioneprotocol.com/smart-contract-and-token-deployment/deploying-smart-contracts
+    
+
++ Token on Odyssey
+
+  + Odyssey Mainnet
+
+    | Token | Address  | Name  | symbol |
+    |:---------------------:|:-------------------:|:---------------:|:------------:|
+    | USDC | 0x8aBEE32587864cce7000e6f2820680874eD6100A |       |         |
+    | Wrapped ART | 0x953AAc5A0205CCdD6E0b4107ffB0a0ef7155F5bE |   Wrapped Arkreen REC Token    |  wART       |
+
+    
+
+  + Odyssey Testnet
+
+    | Token | Address  | Name  | symbol |
+    |:---------------------:|:-------------------:|:---------------:|:------------:|
+    | USDC                  |     |        |         |
+    | Wrapped AKRE（X）     | 0xd83C9743B17426C28Cf3FD12966cc9873D009ABF   |   Wrapped Arkreen Token     |   wAKRE     |
+    | Wrapped ART           | 0xd092e1f47d4e5d1C1A3958D7010005e8e9B48206   |   Wrapped Arkreen REC Token |   wART     |
+
 
 + Mainnet RPC
 
@@ -37,4 +63,17 @@ https://docs.dioneprotocol.com/odyssey-guide-to-mainnet/onboarding-guide/getting
 | Decimals   | 18 |
 | Explorer   |  https://testnet.odysseyscan.com |
 
++ Dione Spark Grant
 
+Dione Spark Grant Recipients Only - Dione Protocol will fund the $DIONE side of the LP via reimbursement upon locking of the trading pair for 6 months minimum via Trustswap, in addition to co-marketing on all socials.
+
+All grants will be approved on case to case basis after on internal review.
+
+
+
++ Flatten 
+
+  + npx hardhat flatten contracts/Arkreen/WrappedToken.sol flatten/WrappedToken.sol
+
+
+  + npx hardhat --network celo etherscan-verify --api-url https://api.celoscan.io --api-key VGRXNYA5HSJQMRRYKCQHUIMCFGJV63N6UU

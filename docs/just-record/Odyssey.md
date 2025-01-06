@@ -31,8 +31,7 @@ sidebar_position: 2
     |:---------------------:|:-------------------:|:---------------:|:------------:|
     | USDC | 0x8aBEE32587864cce7000e6f2820680874eD6100A |       |         |
     | Wrapped ART | 0x953AAc5A0205CCdD6E0b4107ffB0a0ef7155F5bE |   Wrapped Arkreen REC Token    |  wART       |
-
-    
+    | Wrapped AKRE | 0x960C67B8526E6328b30Ed2c2fAeA0355BEB62A83 |   Wrapped Arkreen Token    |  wAKRE       |
 
   + Odyssey Testnet
 
@@ -41,7 +40,7 @@ sidebar_position: 2
     | USDC                  |     |        |         |
     | Wrapped AKRE（X）     | 0xd83C9743B17426C28Cf3FD12966cc9873D009ABF   |   Wrapped Arkreen Token     |   wAKRE     |
     | Wrapped ART           | 0xd092e1f47d4e5d1C1A3958D7010005e8e9B48206   |   Wrapped Arkreen REC Token |   wART     |
-
+    | Wrapped AKRE         | 0xeb0a8d25cc479825e6Ca942D516a1534C32dFBe4 |   Wrapped Arkreen Token    |  wAKRE       |
 
 + Mainnet RPC
 

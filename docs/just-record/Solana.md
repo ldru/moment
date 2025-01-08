@@ -21,8 +21,77 @@ sidebar_position: 1
   |  Solana Mainnet  |  https://explorer.solana.com/     |
   |  Solana Testnet | https://explorer.solana.com/?cluster=testnet       |
   |  Solana Devnet | https://explorer.solana.com/?cluster=devnet       |
+  |  AREC Demo  | https://arec-sol-demo.vercel.app       |
+ 
 
-+ How to run AREC Demo Dapp on Solana Dapp
++ Critical Addresses
+
+  | Useful Link        |   Address            |                     |
+  |:---------------------:|:-------------------:|:-------------------:|
+  |  AREC Bridge  |  7fEvnVYgDkZfT6JkffusC5f2vcRRMdd6dZqAAWURek61     |        |
+  |  AREC State   |  4Bz3gpTZ8KgaUdUXCqPcmR1dxcFxVYNd3V3g146EHhGS     |        |
+  |  User Arec State   |  HKvC7EshiLQC5qMY5dpD8iq1VkH6wCLZEJuNYH7QTaJb     |        |
+  |  Arec Nft Info   |  47Y1q5Zrv64RNAQZsfx86qYGjgMBf5MEHE1oUTUubFKy     |        |
+  |  Arec Asset info   |  1goc2wSQjxHjJg6aQtgPGJmMh7SYcEW5KLWwwLtHWi2     |        |
+  |  AKRE Token   |  akreF6MMz2A9safhSdrdyoeWzhHCzNPggJaaY2Npvo4     |        |
+  |  Arec Income Account   |  79xyrmkYvvAZDKdetZSS6ox7nCDfz4NCjuhKNxXcYHgx     |        |
+  |  User Payment Account   |  G4QbyrhBpPYdUPpJWWUsFwAhtD5hcjDkFUvoGCFa4HJN     |        |
+  |  AREC NFT     |  arec5aj8j6nZB5EZX1jspWRyZh7GiAW4CfN26L6GTNp     |        |
+  |  Arec Nft Account   |  ECM2wzUF62qczS65fMFxAUsBT4tQwGzvtWJyku3nuYmL     |        |
+  |  AKRE Token   |  akreF6MMz2A9safhSdrdyoeWzhHCzNPggJaaY2Npvo4       |        |
+  |  AREC NFT     |  arec5aj8j6nZB5EZX1jspWRyZh7GiAW4CfN26L6GTNp       |        |
+  |  ART Token    |  art8zaVhaKBZp6sVeVd72oQoKseFqwNDcxGW32VBe1Q       |        |
+  |  Badge NFT    |  badgeWgrqhK8aHvQuy61gzDo5wHBmqVat8tW3w6qcjg       |        |
+  |  Arec Liquidized List   |  2qYEHj698SkSdLqDtWCCvu1BoTdxG1kcC42mTYVeiT9a       |        |
+  |  Arec Redeemed List   |  DZHnQkJ4DRMtSbkyNoVYVVosxQ26jFX4bQuzEty2pnhj       |        |
+  |  Arec Badge List   |  6N4WaK3niNP7UQTACyhdjNW8kqa2UVTTM685GYyshiJT       |        |
+  |  MVP1         | 9DcHReaSPqt2iFhKZxNY4SjucYNyaYfAKazhHV4XGANa       |  Linux 1  |
+  |  MVP2         | AcyVq43dVqHPpXbCmP7jZ2K59GYtdb2yCjkrxAn9PvFc       |  Linux 2  |
+  |  MVP3         | DKfM6YcF2wXDSCUMLP6LamkTwvVRpHdCj6n69gmYGQJz       |  Linux 3 (Devnet Authority) |
+  |  MVP4         | JDqWcKxEmzCHKw2TrANV7QcJP678RWWPMz6pSLYopwmW       |  Linux 4 (AKRE Owner)  |
+  |  MVP5         | 5Qf1GdXUYJgDVK8KPDe28fcSpUruHE3daBF8wrEwf1oc       |   Edge 4  |
+
++ Wallet List 
+
+  + Edge (inside...)
+
+    | Useful Link        |   Address            |                     |
+    |:---------------------:|:-------------------:|:-------------------:|
+    |  Edge 1 |  9gNjtfH461XJXxKDcjnkUpfkofsvSytZVNpy3QCLigke      |  |
+    |  Edge 2 |  8rYXr3GiTMnX2Ek4vhJLKTxEmEStuD3nNNrvr8hGBniS      |  |
+    |  Edge 3 |  8v3fsEv6UomcAeqcyEf2TdsBff9woYyipgZy3HkFfxqz      |  |
+    |  Edge 4 |  5Qf1GdXUYJgDVK8KPDe28fcSpUruHE3daBF8wrEwf1oc      |  |
+    |  Edge 5 |  GGh4NnLF5iEJn7AsAVS5izsq2njZKzK9nFEcKNKkcSPs      |  AREC Deploy (Mainnet) |
+    |  Edge (WormHole) |  53NfDaRW8BduDLi9pVStJt2cb5mhr4QA8VFsvK1JiNdV      |  Imported |
+
+  + Linux (Leopard...)
+    | Useful Link        |   Address            |                     |
+    |:---------------------:|:-------------------:|:-------------------:|
+    |  Linux 1 |  9DcHReaSPqt2iFhKZxNY4SjucYNyaYfAKazhHV4XGANa      |  |
+    |  Linux 2 |  AcyVq43dVqHPpXbCmP7jZ2K59GYtdb2yCjkrxAn9PvFc      |  |
+    |  Linux 3 |  DKfM6YcF2wXDSCUMLP6LamkTwvVRpHdCj6n69gmYGQJz      |  |
+    |  Linux 4 |  JDqWcKxEmzCHKw2TrANV7QcJP678RWWPMz6pSLYopwmW      |  |
+    |  Linux 5 |  5Qf1GdXUYJgDVK8KPDe28fcSpUruHE3daBF8wrEwf1oc      |   |
+
+
++ Cost to load Program
+  + 22wEL63FeAngtByix1GmEV1AjdwGzq29hrdyHtxcCbG4Cq3guwx3cPKzkQcT6GGYZHLuXtKAEXMafoJQ6Tez86RW (System Program: Create Account)
+    + 8mtywsEkVd7NFXStiMF1PXQL9GNCsErWChkpXznMJSXm ◎6.01982232  (864781 Bytes)
+  + 5pkE694YJ34kFuBWB7hpPdVt8eWEU1MuCSimw7FepWizD7eiUXmy4e9Dudp2F68o1UvjYMhf8XPSmTGcbP7RaGzL (BPF Upgradeable Loader: Upgrade)
+    + CVphs2C48sNFAE9bCdZacpBMwy3A6WL4dVJmLFua39XL ◎7.09711896 (1019573 Bytes)
+
+**+ Steps to init AREC**
+1. Initalize AREC on-chain program
+    + "Arec Init" -> "Initalize AREC on-chain program"
+    + xzBDteoYd2bmtbBCsUcY1r5nMDnWu4obH6wrNhPDc6LLP97s7U3ABjtcckRJfgaz6EZ2Jr14WvkWSpfyhiXng12
+      + Instruction 1: init_arec
+      + Instruction 2: init_arec_list
+2. Initalize AREC account
+    + "Arec Init" -> "Initalize AREC account"
+    + 43s7XftooRirvrJFgGQ6wUbjbavHGC3WZVBbyJ1ExSFtuGDZaekQhbGiiNCN2dVcCu3KhoCqjdSRGx8rQVKXNoP
+
+
+**+ How to run AREC Demo Dapp on Solana Dapp**
   + E:\BlockchainWallet\Argon\solana22\arec-sol-demo
   + ()
   + yarn dev
@@ -779,3 +848,59 @@ sidebar_position: 1
     
 
 ```      
+
+```
+4thwKiMbvEmpkrnkdX7N3NYaVRiFoyzgSnnnUiXcGgnB3GMoFPHosbSB7dUL…
+332,886,336	3 months ago	Oct 14, 2024 at 14:49:43 UTC	Success
+3vKiRCtNXD9MjoGowLgjpyMXiFzTBfafWKEpyNgigec3qbtDZhq5Laskt1tb…
+332,353,908	3 months ago	Oct 12, 2024 at 07:29:35 UTC	Success
+7fNa8VJsYxB8qoBoEGgmNNJxbG2NXusg48uPEqDcxE9h24aRDsmyGHhrSaku…
+332,353,818	3 months ago	Oct 12, 2024 at 07:29:02 UTC	Success
+fYYPfi8SVCyAx4oPu1eFnZRvx6jhWYYJHFL9B8TsnR7HTBtJSkBG7PFQH8NW…
+332,353,565	3 months ago	Oct 12, 2024 at 07:27:27 UTC	Success
+5WaDVQ1MpY7WH2EjeqrBTJf6hKX1V99VBpzZ3HgLoAM4AeijHhpKZdNzoAHW…
+332,352,428	3 months ago	Oct 12, 2024 at 07:20:21 UTC	Success
+3DZYPZfXSKy6DwJ9iX36QeAxbjaiQE2N9Bw8mVnyHpBRSv43Vfgxf77bu1hy…
+332,352,007	3 months ago	Oct 12, 2024 at 07:17:45 UTC	Success
+5BtJXX9S8myeALJqMZxiuBUGeMLZbLKDrEg7Uq61rrXhFutbD3JXFkiDSf8Q…
+331,959,564	3 months ago	Oct 10, 2024 at 14:37:45 UTC	Success
+38wNCBEiSZugT5FZ5HGqv71ZwP7AVPsUNW9CxJpWuQARNetHu6mF79wcKfgj…
+331,926,372	3 months ago	Oct 10, 2024 at 11:11:37 UTC	Success
+4c7X7KnaXWeK34PJd8huu6bP9sp1UKA9yB6AYaV5QHckBb6sSfRsrqxynMrg…
+331,926,312	3 months ago	Oct 10, 2024 at 11:11:15 UTC	Success
+qCyq6Wnj2hC25r61ZfAsbWTToTPeA4zpXfhq6NktSitvKs3Py7XEQjTdyFQ5…
+331,925,776	3 months ago	Oct 10, 2024 at 11:07:57 UTC	Success
+5xU589CPeBYvbHq6Y7j1xDa1JZxfQWnBw29L2BgzvzpDRcRdxYsejZDYkta6…
+331,882,192	3 months ago	Oct 10, 2024 at 06:37:31 UTC	Success
+2iWZxXnBbg4eatBvFTKpXwgB6UM18Cahc6tVYwt7Jc6Vko1HmWc4sKhz2Jhp…
+331,843,828	3 months ago	Oct 10, 2024 at 02:39:10 UTC	Success
+BTD59yLfH5sEydE383BNL5A3gnBkXRNWCQT1g6WjwZBzXPPQLcni78cjQLd2…
+331,843,747	3 months ago	Oct 10, 2024 at 02:38:39 UTC	Success
+4YU9KRaPdNzEZyj5zUrPZdHTeHuzk7P29XiDPVmHN2SPqkrr3j3y6zY35Pt1…
+331,843,520	3 months ago	Oct 10, 2024 at 02:37:15 UTC	Success
+3eE76mME9fNtdAy9iX7XWWqL1WZAEqtYPDTr4AM5XoFmtb9oTyTULcHoQjRo…
+331,841,648	3 months ago	Oct 10, 2024 at 02:25:38 UTC	Success
+2QhtrkfmurXGdku6o6ky2yWhAK4EreiLTyinrUyFxny7pSqFKCvGidY6i7zn…
+331,684,936	3 months ago	Oct 9, 2024 at 10:14:55 UTC	Success
+3MrdX17poa2L2w6a3BGgHnHgPRXXBCVkyWyBQjjpgTumf7Hpv5VwQdpaAz5N…
+331,684,659	3 months ago	Oct 9, 2024 at 10:13:11 UTC	Success
+41iqXfK52m6CaDBe8NrUYoKrTfxPaGUSn2LsZkx5Cpn7CYqWdEF4GwvjHGvH…
+331,413,296	3 months ago	Oct 8, 2024 at 06:14:02 UTC	Success
+5onfbbL8fXN4WJewtr1zvhhoqsGoDaMBGB9oL8xkaCTxbSEoc812kZtzHuyn…
+331,412,830	3 months ago	Oct 8, 2024 at 06:11:10 UTC	Success
+5buGcNeWckF7BiXViu6CybBm3Nv4vahWTvUmQQok6bWwEWj3u9xFDT2VWYKk…
+331,411,680	3 months ago	Oct 8, 2024 at 06:04:06 UTC	Success
+2r7Y8756v9SfBrBrTnRfbs9LTwLhKgS6DCKPUamAkZahNifWALi9HKSqt5cp…
+331,271,696	3 months ago	Oct 7, 2024 at 15:39:46 UTC	Success
+5tKBheyZASeLVcUyhma9iBF8Fn4Yao7967UFiiSMHvq1fkifcY7fSn1cnSh7…
+331,234,994	3 months ago	Oct 7, 2024 at 11:48:59 UTC	Success
+4RsJ4Gzw2ucwLbMPGrD4ddsT9uWYEB1CqeZcYpqwzwS9vFqTsxXf8UP2RbHA…
+331,234,880	3 months ago	Oct 7, 2024 at 11:48:16 UTC	Success
+2tQ7RNYmYRQ48jmi8d55bWLLqXEjbcH128XBoNnqyJWWkWp8C2XsfQys6pTe…
+331,233,280	3 months ago	Oct 7, 2024 at 11:38:10 UTC	Success
+5pkE694YJ34kFuBWB7hpPdVt8eWEU1MuCSimw7FepWizD7eiUXmy4e9Dudp2…  :  Upgrade
+331,193,352	3 months ago	Oct 7, 2024 at 07:25:51 UTC	Success
+...
+22wEL63FeAngtByix1GmEV1AjdwGzq29hrdyHtxcCbG4Cq3guwx3cPKzkQcT…   :
+331,193,088	3 months ago	Oct 7, 2024 at 07:24:11 UTC	Success
+```

@@ -27,7 +27,11 @@ sidebar_position: 1
   |  Solana Testnet | https://explorer.solana.com/?cluster=testnet       |
   |  Solana Devnet | https://explorer.solana.com/?cluster=devnet       |
   |  AREC Demo  | https://arec-sol-demo.vercel.app       |
-
+  |  All on-chain program  | https://explorer.solana.com/address/7fEvnVYgDkZfT6JkffusC5f2vcRRMdd6dZqAAWURek61?cluster=devnet     |
+  |  How to Verify a Program  | https://solana.com/developers/guides/advanced/verified-builds     |
+  |  Intro to client-side Anchor development  | https://solana.com/developers/courses/onchain-development/intro-to-anchor-frontend     |
+  |  Anchor-ping Example  | https://github.com/solana-developers/anchor-ping-frontend     |
+  
 **+ Critical Addresses**
 
   | Useful Link        |   Address            |                     |

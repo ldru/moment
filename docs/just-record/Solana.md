@@ -4,11 +4,6 @@ sidebar_position: 1
 
 # Solana Memo
 
-
-**+ Solana Commands**
-   + solana program close <PROGRAM_ID>
-
-
 **+ How to run AREC Demo Dapp on Solana Dapp**
   + E:\BlockchainWallet\Argon\solana22\arec-sol-demo
   + ()
@@ -16,10 +11,12 @@ sidebar_position: 1
 
 **+ How to recover the deployment**
   1. solana-keygen recover -o recover.json --force
+  ```
     >> [recover] seed phrase:  (Copy and paste the 12-word seed phrase)
     >> [recover] If this seed phrase has an associated passphrase, enter it now. Otherwise, press ENTER to continue: (Input ENTER)
     >> Recovered pubkey `"7KMvcE5UUrDYadWuFakgDwUq6rYQmZBaBa5T7KbEnrxC"`. Continue? (y/n):   (Input y)
     >> Wrote recovered keypair to recover.json
+  ```
   2. solana program deploy --buffer recover.json /home/ldru/solana/ArkreenSol/target/deploy/arec_sol.so
 
 **+ Solana command list**
@@ -31,6 +28,7 @@ sidebar_position: 1
 5. solana address
 6. solana airdrop 5
 7. solana program close --buffers --buffers [ACCOUNT_ADDRESS]
+7. solana program close [PROGRAM_ID]
 8. anchor test --skip-deploy
 
 **+ WormHole Bridge**

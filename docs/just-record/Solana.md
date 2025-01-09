@@ -4,10 +4,34 @@ sidebar_position: 1
 
 # Solana Memo
 
+
+**+ Solana Commands**
+   + solana program close <PROGRAM_ID>
+
+
 **+ How to run AREC Demo Dapp on Solana Dapp**
   + E:\BlockchainWallet\Argon\solana22\arec-sol-demo
   + ()
   + yarn dev
+
+**+ How to recover the deployment**
+  1. solana-keygen recover -o recover.json --force
+    >> [recover] seed phrase:  (Copy and paste the 12-word seed phrase)
+    >> [recover] If this seed phrase has an associated passphrase, enter it now. Otherwise, press ENTER to continue: (Input ENTER)
+    >> Recovered pubkey `"7KMvcE5UUrDYadWuFakgDwUq6rYQmZBaBa5T7KbEnrxC"`. Continue? (y/n):   (Input y)
+    >> Wrote recovered keypair to recover.json
+  2. solana program deploy --buffer recover.json /home/ldru/solana/ArkreenSol/target/deploy/arec_sol.so
+
+**+ Solana command list**
+1. anchor build
+1. anchor keys list
+2. anchor keys sync
+3. solana config get
+4. solana balance
+5. solana address
+6. solana airdrop 5
+7. solana program close --buffers --buffers [ACCOUNT_ADDRESS]
+8. anchor test --skip-deploy
 
 **+ WormHole Bridge**
 
@@ -61,6 +85,14 @@ sidebar_position: 1
   |  MVP3                       | DKfM6YcF2wXDSCUMLP6LamkTwvVRpHdCj6n69gmYGQJz        |  Linux 3 (Devnet Authority) |
   |  MVP4                       | JDqWcKxEmzCHKw2TrANV7QcJP678RWWPMz6pSLYopwmW        |  Linux 4 (AKRE Owner)  |
   |  MVP5                       | 5Qf1GdXUYJgDVK8KPDe28fcSpUruHE3daBF8wrEwf1oc        |  Edge 4  |
+
+  arecAssetInfoAccount:   1goc2wSQjxHjJg6aQtgPGJmMh7SYcEW5KLWwwLtHWi2
+  artTokenMint:           art8zaVhaKBZp6sVeVd72oQoKseFqwNDcxGW32VBe1Q
+  arecNftMint:            arec5aj8j6nZB5EZX1jspWRyZh7GiAW4CfN26L6GTNp
+  climateBadgeMint:       badgeWgrqhK8aHvQuy61gzDo5wHBmqVat8tW3w6qcjg
+  arecLiquidizedList:     2qYEHj698SkSdLqDtWCCvu1BoTdxG1kcC42mTYVeiT9a
+  arecRedeemedList:       DZHnQkJ4DRMtSbkyNoVYVVosxQ26jFX4bQuzEty2pnhj
+  arecBadgeList:          6N4WaK3niNP7UQTACyhdjNW8kqa2UVTTM685GYyshiJT
 
 **+ Wallet List** 
 

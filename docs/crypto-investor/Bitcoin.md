@@ -2,7 +2,11 @@
 sidebar_position: 2
 ---
 
-# Bitcoin
+**# Bitcoin**
+
+https://support.binance.us/hc/en-us
+
+**# Bitcoin**
 
 ## 1. 减半日期: 
 

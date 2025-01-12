@@ -13,6 +13,12 @@ sidebar_position: 2
 |  Test Dione Faucet  |  https://portal.dioneprotocol.com/faucet     |
 |  Testnet Explorer | [https://testnet.odysseyscan.com](https://testnet.odysseyscan.com)       |
 |  Mainnet Explorer | [https://odysseyscan.com/](https://odysseyscan.com/)       |
+|  Dione verification | npx hardhat --network dione etherscan-verify --api-url https://api.odysseyscan.com//api/v1/ --api-key 123     |
+|  Dione Test verification | npx hardhat --network dione_test etherscan-verify --api-url https://api-testnet.odysseyscan.com//api/v1/ --api-key 123     |
+|  matic_test | npx hardhat --network matic_test etherscan-verify --api-url https://api-amoy.polygonscan.com --api-key IA769E8IXSJMNP9AGHC9QYX25TWS2E1JUP    |
+|  Matic  | npx hardhat --network matic etherscan-verify --api-key IA769E8IXSJMNP9AGHC9QYX25TWS2E1JUP    |
+|  Celo Test  | npx hardhat --network celo_test etherscan-verify --api-url https://api-alfajores.celoscan.io --api-key VGRXNYA5HSJQMRRYKCQHUIMCFGJV63N6UU   |
+|  Celo  | npx hardhat --network celo etherscan-verify --api-url https://api.celoscan.io --api-key VGRXNYA5HSJQMRRYKCQHUIMCFGJV63N6UU   |
 
 + Deploy Wrapped token
 

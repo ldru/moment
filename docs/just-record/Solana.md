@@ -33,17 +33,62 @@ sidebar_position: 1
 
 **+ WormHole Bridge**
 
-  |   Item             |   Importance           |  
-  |:---------------------:|:-------------------:|
-  | Project folder   |  E:\BlockchainWallet\Argon\wormhole\wormhole-sdk-ts\examples     |
-  |  创建包裹的Token  | $ tsx src/createWrapped.ts       |
-  |  Bridge Token    | $ tsx src/tokenBridge.ts       |
-  |  测试Log         | E:\BlockchainWallet\Argon\wormhole\wormhole-sdk-ts\examples\log.txt      |
+  **1. Importance**
 
+    |   Item             |   Importance           |  
+    |:---------------------:|:-------------------:|
+    | Project folder        |  E:\BlockchainWallet\Argon\wormhole\wormhole-sdk-ts\examples     |
+    |  创建包裹的Token      | $ tsx src/createWrapped.ts       |
+    |  Bridge Token       | $ tsx src/tokenBridge.ts       |
+    |  测试Log            | E:\BlockchainWallet\Argon\wormhole\wormhole-sdk-ts\examples\log.txt      |
+    |  安装wormhole SDK   | npm install @wormhole-foundation/sdk      |
+    |  部署包裹 ART       | cd E:\BlockchainWallet\Argon\SolanaBridge;  yarn wrapped    |
+
+
+  **2. Links**
+
+    | Useful Link        |   Useful Link URL            |  
+    |:-------------------------:|:-------------------:|
+    |  Chain IDs                |  https://wormhole.com/docs/build/reference/chain-ids/     |
+    |  Contract Addresses       | https://wormhole.com/docs/build/reference/contract-addresses/       |
+    |  Wormhole TypeScript SDK  | https://wormhole.com/docs/build/applications/wormhole-sdk/wormhole-sdk/       |
+    |  Wormhole TS SDK Docs     | https://wormhole-foundation.github.io/wormhole-sdk-ts/       |
+
+```
+      Ploygon Mainnet: 
+      contracts: {
+        coreBridge: '0x7A4B5a56256163F07b2C80A7cA55aBE66c4ec4d7',
+        tokenBridge: '0x5a58505a96D1dbf8dF91cB21B54419FC36e93fdE',
+        nftBridge: '0x90BBd86a6Fe93D3bc3ed6335935447E75fAb7fCf',
+        relayer: '0x27428DD2d3DD32A4D7f7C497eAaa23130d894911',
+        tokenBridgeRelayer: '0xcafd2f0a35a4459fa40c0517e17e6fa2939441ca',
+        cctp: {
+          tokenMessenger: '0x9daF8c91AEFAE50b9c0E69629D3F6Ca40cA3B3FE',
+          messageTransmitter: '0xF3be9355363857F3e001be68856A2f96b4C39Ba9',
+          wormholeRelayer: '0x4cb69FaE7e7Af841e44E1A1c30Af640739378bb2',
+          wormhole: '0x0FF28217dCc90372345954563486528aa865cDd6'
+        },
+        portico: {
+          porticoUniswap: '0x227bABe533fa9a1085f5261210E0B7137E44437B',
+          uniswapQuoterV2: '0x61fFE014bA17989E743c5F6cB21bF9697530B21e',
+          porticoPancakeSwap: undefined,
+          pancakeSwapQuoterV2: undefined
+        }
+      },
+
+```
+
+  **3. Bridge Steps**
+    **STep 1**
+      Celo: Function: attestToken(address tokenAddress,uint32 nonce)
+    **STep 2**
+      Solana: 
+
+      
 
 **+ Links**
 
-  | Useful Link        |   Halving Date            |  
+  | Useful Link        |   Useful Link URL            |  
   |:---------------------:|:-------------------:|
   |  Solana Mainnet  |  https://explorer.solana.com/     |
   |  Solana Testnet | https://explorer.solana.com/?cluster=testnet       |
@@ -53,6 +98,23 @@ sidebar_position: 1
   |  How to Verify a Program  | https://solana.com/developers/guides/advanced/verified-builds     |
   |  Intro to client-side Anchor development  | https://solana.com/developers/courses/onchain-development/intro-to-anchor-frontend     |
   |  Anchor-ping Example  | https://github.com/solana-developers/anchor-ping-frontend     |
+  |  密钥文件           | E:\BlockchainWallet\Argon\solana22\*.json      |
+
+**+ Generate Keypair Commands**
+
+```
+  E:\BlockchainWallet\Argon\Solana\generate-keypair\generate-keypair.ts
+  npx esrun generate-keypair.ts 
+  npx esrun check-balance.ts
+  npx esrun airdrop.ts
+  npx esrun create-token-mint.ts
+  npx esrun mint-token_1.ts (X)
+
+  npx esrun wallets.ts
+  npx esrun transfer.ts
+  npx esrun mints.ts
+  npx esrun create-metaplex-collection.ts
+```
   
 **+ Critical Addresses**
 

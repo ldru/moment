@@ -1,0 +1,31 @@
+---
+sidebar_position: 1
+---
+
+**# Feswap**
+
+**## 1. FeSwap Pairs**
+
+|    交易对    | 地址     |
+|:---------:|:---------------------:|
+| WETH + USDC(A)      |	0x885abf5f910f861cda642c1cb35de64b5d054245   |
+| WETH + USDC(B)      | 0x307808bac9d48102322f33464e7d9547abe8d33e	 |
+| WMATIC + USDC(A)    |	0x439bbfed03c0e1f004d70d3e54827d74ae4081f6   |
+| WMATIC + USDC(B)    | 0x4742a015d15775cd554e15afee6d326511399286	 |
+| WBTC + USDC(A)      |	0x43e3275c503f6135d6D61833913719249C94acad   |
+| WBTC + USDC(B)      | 0x9EaD2fAE3C50B1A9345768b2349960C303131556 	 |
+| WMATIC + USDT(A)    |	0xc4db53f8f9d6681263918d04bfc6d96dfc737c10   |
+| WMATIC + USDT(B)    | 0x2e7555746f18d1ec033ec4905028a96060f1dbd7	 |
+| WBTC + WETH(A)      |	0xDb66fE9fd4e9B0BCd2642117F60dB10686223ead   |
+| WBTC + WETH(B)      | 0xa59fb9a9103f1fc0A69eBe0cCEfa4cF17D682636 	 |
+
+```
+  WBTC + USDC(1):   0x1c069d51f4db4a14e04509d05ca2bf9fc9660e884a52d59b956cfd30905f1481
+  WETH + USDC(2):   0x2b511dda801c968b67b258c9d3c4d49718e7c884dc4fb8d01614746facd6e38a
+                    0x57e703e4c55052f248098a0e5393af9139ad6645abc725ecf65485ab91261aba
+  WBTC + WETH(1)：  0x49d2f70dfeb02f04119f8fa26769c0e58329947e7b2cec4fbb40649ed2d0d38b
+  WMATIC + USDT(1): 0x0ba71b1dca7fc71060288981bb21b9c034127bd5fdb03ac1eadaee9260526dea
+  WMATIC + USDC(2): 0xa965aa478667699c56ef0ea46be1983228389c4509fd969ccb3af3555db9027a
+                    0x27b0e1cd7c55e5a3c7564644c35470936eaee2a15919babaff180c1dfb16a6ee
+```
+

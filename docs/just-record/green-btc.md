@@ -2,9 +2,58 @@
 sidebar_position: 1
 ---
 
-# GreenBTC 2.0
+**# GreenBTC 2.0**
 
-+ Domain 配置信息
+**免费绿化查询**
+
+
+```
+  https://api.studio.thegraph.com/query/44303/greenbtc20sgraph/version/latest
+
+  query MyQuery {
+    greenBT20SUsers(
+      first: 1000
+      orderBy: timesLucky
+      orderDirection: desc
+      where: {timesNormal: 0}
+      skip: 1000
+    ) {
+      id
+      timesLucky
+      timesNormal
+    }
+  }
+
+  query MyQuery {
+    greenBT20SUsers(
+      first: 1000
+      orderBy: timesLucky
+      orderDirection: desc
+      where: {timesNormal_gt: 0}
+    ) {
+      id
+      timesNormal
+      timesLucky
+    }
+  }
+
+  query MyQuery {
+    greenBT20SPassives(
+      first: 1000
+      orderBy: origin
+      orderDirection: asc
+      skip: 1000
+    ) {
+      id
+      origin
+      timesLuckyAttack
+    }
+  }
+
+```
+
+
+**+ Domain 配置信息**
   + https://github.com/arkreen/greenbtc-config
   + https://github.com/arkreen/greenbtc-config/blob/main/domains.json
 

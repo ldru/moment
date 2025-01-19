@@ -2,7 +2,26 @@
 sidebar_position: 1
 ---
 
-# Solana Memo
+**# Solana Memo**
+
+**How the accounts for EVM-based blockchains (like Ethereum) and Solana are linked together**
+  ```
+    EVM (Ethereum):
+    Derivation path: m/44'/60'/0'/0/n
+    Here, 60 is the coin type for Ethereum, and n is the account index (e.g., 0 for the first account).
+    Solana:
+    Derivation path: m/44'/501'/0'/0/n
+    Here, 501 is the coin type for Solana, and n is the account index.
+  ```
+
+**+ Solana 密钥格式**
+  1. Solana 钱包的的密钥包括 32字节的私钥和32字节的公钥。有两种格式，一是 Uint8Array, 一是Uint8Array的Base58编码;
+  2. 32字节的短密钥，可以通过 Keypair.fromSeed(secretKey)转为Solana 密钥对;
+  3. 64字节的完全密钥，可以通过 Keypair.fromSecretKey(privateKey) 转为Solana 密钥对;
+  4. Uint8Array 格式的密钥转为 base58编码: bs58.encode(secretKey);
+  5. base58编码的密钥转为Uint8Array格式: bs58.decode(privateKeyBase58);
+  6. Hex 格式的密钥转为Uint8Array格式: Buffer.from(privateKey, "hex");
+  7. Uint8Array 格式的密钥转为Hex格式: Buffer.from(secretKey).toString("hex");
 
 **+ How to run AREC Demo Dapp on Solana Dapp**
   + E:\BlockchainWallet\Argon\solana22\arec-sol-demo
@@ -28,8 +47,10 @@ sidebar_position: 1
 5. solana address
 6. solana airdrop 5
 7. solana program close --buffers --buffers [ACCOUNT_ADDRESS]
-7. solana program close [PROGRAM_ID]
-8. anchor test --skip-deploy
+8. solana program close [PROGRAM_ID]
+9. anchor test --skip-deploy
+10. anchor test --skip-local-validator		(!!!!!!!!!!!!!!!!!!!!)
+11. solana-test-validator --reset
 
 **+ WormHole Bridge**
 
@@ -43,6 +64,8 @@ sidebar_position: 1
     |  测试Log            | E:\BlockchainWallet\Argon\wormhole\wormhole-sdk-ts\examples\log.txt      |
     |  安装wormhole SDK   | npm install @wormhole-foundation/sdk      |
     |  部署包裹 ART       | cd E:\BlockchainWallet\Argon\SolanaBridge;  yarn wrapped    |
+    |  portalbridge       | https://portalbridge.com/advanced-tools    |
+    |  生成Lucky地址       | E:\BlockchainWallet\Argon\solana22\ArkreenSol\tests\utils\mint-arec-basics.ts    |
 
 
   **2. Links**
@@ -53,6 +76,28 @@ sidebar_position: 1
     |  Contract Addresses       | https://wormhole.com/docs/build/reference/contract-addresses/       |
     |  Wormhole TypeScript SDK  | https://wormhole.com/docs/build/applications/wormhole-sdk/wormhole-sdk/       |
     |  Wormhole TS SDK Docs     | https://wormhole-foundation.github.io/wormhole-sdk-ts/       |
+
+  **3. How to setup the envirormnet for programs**
+
+```
+        git clone  https://github.com/wormhole-foundation/wormhole-sdk-ts.git
+        cd wormhole-sdk-ts
+        npm install
+        npm run build
+        cd examples
+        ```
+
+        2) Optionally modify token bridge or cctp programs
+
+        3) run stuff
+
+        ```sh
+        npm run tb
+        # or
+        npm run cctp
+        # or
+        npm run gateway
+```
 
 ```
       Ploygon Mainnet: 
@@ -84,7 +129,13 @@ sidebar_position: 1
     **STep 2**
       Solana: 
 
-      
+  **4. wrapped token**
+
+      | Token        |   Solana Address             |      Polygon address |
+      |:---------------------:|:-------------------:|:-------------------:|
+      |  AKRE  |  TqnaKWnG1Tgrqq2LfZepca6cPmTmQSCVHAAsNLgZ2aj    | 0xE9c21De62C5C5d0cEAcCe2762bF655AfDcEB7ab3 |
+      |  kWh   | TqnaKWnG1Tgrqq2LfZepca6cPmTmQSCVHAAsNLgZ2aj     | 0x5740A27990d4AaA4FB83044a6C699D435B9BA6F1 |
+   
 
 **+ Links**
 
@@ -99,6 +150,9 @@ sidebar_position: 1
   |  Intro to client-side Anchor development  | https://solana.com/developers/courses/onchain-development/intro-to-anchor-frontend     |
   |  Anchor-ping Example  | https://github.com/solana-developers/anchor-ping-frontend     |
   |  密钥文件           | E:\BlockchainWallet\Argon\solana22\*.json      |
+  |  wormhole-sdk-ts    | E:\BlockchainWallet\Argon\wormhole\wormhole-sdk-ts    |
+  |  generate-keypair    | E:\BlockchainWallet\Argon\Solana\generate-keypair    |
+
 
 **+ Generate Keypair Commands**
 
@@ -426,7 +480,7 @@ sidebar_position: 1
   + https://github.com/neodyme-labs/solana-security-txt
 
 
-+ How to setup Solana development environment
+**+ How to setup Solana development environment**
 
 ```
   Status: No Curl, Node, yarn, npm, git
@@ -553,7 +607,7 @@ sidebar_position: 1
 
 ```
 
-+  Good.txt
+**+  Good.txt**
       
 ```
   9gNjtfH461XJXxKDcjnkUpfkofsvSytZVNpy3QCLigke
@@ -596,9 +650,6 @@ sidebar_position: 1
   Where -u is the rpc url or moniker (d for devnet in this example) -k the path to the program upgrade authority keypair (signer) 20000 is 20 kb more space, adjust properly. And prog111111111111111111111111111111111111111 should be your deployed program id. – 
   kevinrodriguez-io
   CommentedMar 18 at 23:25 
-
-
-
 
 
   SSSSSSSSSSS arec5aj8j6nZB5EZX1jspWRyZh7GiAW4CfN26L6GTNp 
@@ -1177,6 +1228,8 @@ sidebar_position: 1
     
 
 ```      
+
+**+  Deployment Transaction List**
 
 ```
 4thwKiMbvEmpkrnkdX7N3NYaVRiFoyzgSnnnUiXcGgnB3GMoFPHosbSB7dUL…

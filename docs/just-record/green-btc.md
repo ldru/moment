@@ -4,8 +4,18 @@ sidebar_position: 1
 
 **# GreenBTC 2.0**
 
-**免费绿化查询**
+**两个不同的 GreenBTC 事件**
 
+  + DomainGreenizedNode (address gbtcActor, uint256 nodeId, address nodeOwner, uint256 percentage, uint256 actionNumber, uint256 blockHeight, uint256 domainID, uint256 boxStart, uint256 boxNumber)
+    
+    + 0xdef85dad0ce988d92cdc7f0961cee59d50a95bbf62ac87bfe477f241baff59e9
+
+  + DomainGreenizedNode (address gbtcActor, uint256 actionNumber, uint256 blockHeight, uint256 domainID, uint256 boxStart, uint256 boxNumber, uint256 nodeId, address nodeOwner, uint256 percentage)
+
+    + 0xd4749588de79672a49dbce6045babcce0a267c3d2f068f486152a16c141c64b2
+
+
+**免费绿化查询**
 
 ```
   https://api.studio.thegraph.com/query/44303/greenbtc20sgraph/version/latest

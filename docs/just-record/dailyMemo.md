@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Daily Memo
 
+https://www.geogebra.org/calculator
+
 **Simple staking Record**
 
     | Pool                  |   Start Time          |       Endtime                |         Liquidity  |               Date |

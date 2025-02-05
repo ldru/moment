@@ -4,6 +4,19 @@ sidebar_position: 1
 
 **# Solana Memo**
 
+  + Integrate Raydium Swap Functionality on a Solana Program
+    + https://blockchain.oodles.io/dev-blog/integrate-raydium-swap-functionality-solana-program/
+
+  + Solana rpc:
+    + https://mainnet.helius-rpc.com/?api-key=36703baf-8e23-46df-8330-bda161b61c5b
+    + https://devnet.helius-rpc.com/?api-key=36703baf-8e23-46df-8330-bda161b61c5b
+    + https://solana-mainnet.api.syndica.io/api-key/4fPYAGY635k6X9RJqEay7DLU4bVJAbTm25d7bNJ9gHf145Xc8u3Q7pPxzktzUWsEsmzdgZbSfdowBNqmGTY8Xfv8ZJ5PpqXT6fF
+    + https://solana-mainnet.api.syndica.io/api-key/4eXtFnQmp1C1eRZoWcSutx6uBGVSJjKYkUoQ2JGYNmTt8cE7mzt4qcmjRrkxh3UkCTYQ28zfPAU61ZozKPcRQgXe5uiFXzCC1eS
+
+  
+**Create Pool**
+  1. https://explorer.solana.com/tx/2EcNEQ26WSbojGfwEy5csvy1RDnnbVhCfXXHqED5YCTE4atwZbR8Kx659pPokHhy4CysnNqYmLsP5MSrdj5ia5yK
+
 **ART Pool**
   https://app.meteora.ag/dlmm/create
   https://raydium.io/clmm/create-pool

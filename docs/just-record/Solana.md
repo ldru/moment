@@ -13,7 +13,55 @@ sidebar_position: 1
     + https://solana-mainnet.api.syndica.io/api-key/4fPYAGY635k6X9RJqEay7DLU4bVJAbTm25d7bNJ9gHf145Xc8u3Q7pPxzktzUWsEsmzdgZbSfdowBNqmGTY8Xfv8ZJ5PpqXT6fF
     + https://solana-mainnet.api.syndica.io/api-key/4eXtFnQmp1C1eRZoWcSutx6uBGVSJjKYkUoQ2JGYNmTt8cE7mzt4qcmjRrkxh3UkCTYQ28zfPAU61ZozKPcRQgXe5uiFXzCC1eS
 
-  
+
+```
+
+const { expect } = require('chai');
+const BN = require('bn.js');
+
+// Custom deep comparison for BN instances
+function deepEqualWithBN(obj1, obj2) {
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+
+  if (keys1.length !== keys2.length) return false;
+
+  for (let key of keys1) {
+    const val1 = obj1[key];
+    const val2 = obj2[key];
+
+    if (BN.isBN(val1) && BN.isBN(val2)) {
+      if (!val1.eq(val2)) return false;
+    } else if (typeof val1 === 'object' && typeof val2 === 'object') {
+      if (!deepEqualWithBN(val1, val2)) return false;
+    } else {
+      if (val1 !== val2) return false;
+    }
+  }
+
+  return true;
+}
+
+describe('Custom object comparison with BN.js', () => {
+  it('should compare objects with BN instances using custom function', () => {
+    const obj1 = {
+      balance: new BN('1000000000000000000'),
+      user: '0x1234',
+      nested: { amount: new BN('500') }
+    };
+
+    const obj2 = {
+      balance: new BN('1000000000000000000'),
+      user: '0x1234',
+      nested: { amount: new BN('500') }
+    };
+
+    expect(deepEqualWithBN(obj1, obj2)).to.be.true;
+  });
+});
+
+```
+
 **Create Pool**
   1. https://explorer.solana.com/tx/2EcNEQ26WSbojGfwEy5csvy1RDnnbVhCfXXHqED5YCTE4atwZbR8Kx659pPokHhy4CysnNqYmLsP5MSrdj5ia5yK
 

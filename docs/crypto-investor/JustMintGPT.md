@@ -31,7 +31,7 @@ Where:
 
 <figure>
   <div align="center">
-    <img src="./img/MintCurve.jpg" style={{ height: 50%}} alt="" />
+    <img src="./img/MintCurve.jpg" height="50%" alt="" />
   </div>
   <figcaption>
     <div align="center">

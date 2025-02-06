@@ -60,6 +60,36 @@ describe('Custom object comparison with BN.js', () => {
   });
 });
 
+import * as anchor from "@coral-xyz/anchor";
+import { Connection, Keypair, PublicKey, clusterApiUrl } from "@solana/web3.js";
+import fs from "fs";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+// Load private key from file
+const secretKey = JSON.parse(fs.readFileSync(process.env.PRIVATE_KEY_PATH, "utf8"));
+const wallet = Keypair.fromSecretKey(new Uint8Array(secretKey));
+
+// Connect to Solana mainnet
+const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+
+// Set up the Anchor provider
+const provider = new anchor.AnchorProvider(connection, new anchor.Wallet(wallet), {
+  commitment: "confirmed",
+});
+anchor.setProvider(provider);
+
+// Program ID of the deployed Solana program
+const PROGRAM_ID = new PublicKey("YourProgramPublicKeyHere");
+
+// Initialize the Anchor program
+const idl = await anchor.Program.fetchIdl(PROGRAM_ID, provider);
+const program = new anchor.Program(idl, PROGRAM_ID, provider);
+
+console.log("Connected to Solana mainnet with wallet:", wallet.publicKey.toBase58());
+
+
 ```
 
 **Create Pool**

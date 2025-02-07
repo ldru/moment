@@ -3431,4 +3431,133 @@ The secret key is:  Uint8Array(64) [
 ]
 
 
+In a Solana Anchor on-chain program, the best practice for verifying the signature of an off-chain wallet is to use the ed25519 system program. This method ensures efficient and secure signature verification while keeping compute costs low.
+
+✅ Best Practice: Using the Solana Built-in ed25519 Instruction
+Solana provides a built-in ed25519 program that efficiently verifies signatures. This method is preferred over implementing signature verification manually using ed25519_dalek because:
+
+It is more efficient in terms of compute units.
+It is precompiled and optimized by Solana.
+It avoids including large cryptographic dependencies in your program.
+Steps to Verify an Off-Chain Signature in an Anchor Program
+The off-chain wallet signs a message and sends the signature to your program.
+The on-chain Anchor program calls the ed25519 program to verify the signature.
+1️⃣ Off-Chain (Client Side) - Sign the Message
+Before sending the transaction to your Anchor program, the off-chain wallet must sign the message and attach:
+
+The message that was signed.
+The signature generated.
+The public key of the signer.
+Client-side Example (JavaScript)
+javascript
+Copy
+Edit
+const nacl = require("tweetnacl");
+const { Keypair, PublicKey } = require("@solana/web3.js");
+
+// Generate a keypair (or load an existing one)
+const keypair = Keypair.generate();
+const message = Buffer.from("Verify this message on-chain!", "utf-8");
+
+// Sign the message
+const signature = nacl.sign.detached(message, keypair.secretKey);
+
+// Convert signature to a format that can be sent to the Solana program
+console.log("Public Key:", keypair.publicKey.toBase58());
+console.log("Message:", message.toString());
+console.log("Signature (Base64):", Buffer.from(signature).toString("base64"));
+This signed message and signature should be included in the transaction sent to your Anchor program.
+
+2️⃣ On-Chain (Anchor Program) - Verify the Signature
+Inside the Solana on-chain program, you can use the ed25519 instruction to verify the signature.
+
+Anchor Rust Program Example
+rust
+Copy
+Edit
+use anchor_lang::prelude::*;
+use solana_program::{
+    ed25519_program,
+    program::{invoke},
+    instruction::Instruction
+};
+
+declare_id!("YourProgramIdHere");
+
+#[program]
+pub mod verify_signature {
+    use super::*;
+
+    pub fn verify_ed25519_signature(
+        ctx: Context<VerifySig>,
+        public_key: [u8; 32],  // The signer's public key
+        signature: [u8; 64],   // The signature
+        message: Vec<u8>,      // The message that was signed
+    ) -> Result<()> {
+        let message_len = message.len() as u16;
+
+        // Construct the instruction data for the ed25519 program
+        let mut instruction_data = vec![];
+        instruction_data.extend_from_slice(&public_key);
+        instruction_data.extend_from_slice(&signature);
+        instruction_data.extend_from_slice(&message_len.to_le_bytes());
+        instruction_data.extend_from_slice(&message);
+
+        // Invoke the ed25519 program
+        invoke(
+            &Instruction {
+                program_id: ed25519_program::id(),
+                accounts: vec![],
+                data: instruction_data,
+            },
+            &[],
+        )?;
+
+        msg!("Signature verified successfully!");
+        Ok(())
+    }
+}
+
+// Context for the instruction (No accounts needed since ed25519 verification is stateless)
+#[derive(Accounts)]
+pub struct VerifySig {}
+3️⃣ Explanation of Code
+The client signs the message using a private key off-chain.
+The client sends (message, signature, public key) in a transaction to the on-chain program.
+The on-chain program invokes the Solana ed25519 system program to verify the signature.
+If the signature is valid, the program executes successfully.
+If the signature is invalid, the transaction fails.
+4️⃣ Why Is This the Best Practice?
+✅ Efficient – Uses the Solana precompiled ed25519 program, avoiding unnecessary compute cost.
+✅ Secure – Relies on Solana’s built-in cryptographic verification rather than custom implementations.
+✅ Lightweight – No need for large libraries like ed25519_dalek, which increases binary size.
+
+5️⃣ Alternative: Using ed25519_dalek (Not Recommended)
+You could verify signatures manually using ed25519_dalek like this:
+
+rust
+Copy
+Edit
+use ed25519_dalek::{PublicKey, Signature, Verifier};
+
+pub fn verify_signature_offchain(
+    public_key_bytes: &[u8; 32],
+    message: &[u8],
+    signature_bytes: &[u8; 64],
+) -> Result<(), ProgramError> {
+    let public_key = PublicKey::from_bytes(public_key_bytes)?;
+    let signature = Signature::from_bytes(signature_bytes)?;
+    public_key.verify(message, &signature)?;
+    Ok(())
+}
+However, this is not recommended because:
+
+Increases compute unit costs.
+Bloats the program with unnecessary dependencies.
+Doesn't take advantage of Solana's optimized ed25519 program`.
+✅ Final Recommendation
+Always use Solana's built-in ed25519 system program for signature verification inside an Anchor on-chain program. This ensures efficiency, security, and lower compute costs.
+
+Let me know if you need help implementing this in your project! 🚀
+
 ```
